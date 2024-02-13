@@ -69,8 +69,26 @@ h2.sub-title{
     html파일이 아닌 CSS파일 위치에서 상대경로를
     잡아야 이미지가 나옴 */
 }
+.politics{
+    background-image: url(../images/titbg1.jpg);
+}
+.economics{
+    background-image: url(../images/titbg2.jpg);
+}
+.social{
+    background-image: url(../images/titbg3.jpg);
+}
+.it{
+    background-image: url(../images/titbg4.jpg);
+}
+.tv{
+    background-image: url(../images/titbg5.jpg);
+}
 
-/* #이 id .이 class 헷갈리지말기 */
+
+
+
+/* #이 id .이 class 헷갈리지말기 이건 id로 한거
 h2#politics{
     background-image: url(../images/titbg1.jpg);
 }
@@ -85,4 +103,4 @@ h2#it{
 }
 h2#tv{
     background-image: url(../images/titbg5.jpg);
-}
+} */
