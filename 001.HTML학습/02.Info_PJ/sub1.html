@@ -1,94 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 탭에 출력되는 타이틀 -->
-    <title>네이버 요약뉴스 - 정치 뉴스</title>
-    <!-- CSS 인터널방식 코드 -->
-    <style></style>
-    <!-- CSS 익스터널방식 코드 -->
-    <link rel="stylesheet" href="./css/sub.css">
-  </head>
-  <body>
-    <!-- 1. 상단영역 : 제목, 메뉴 -->
-    <header id="top-area" class="part">
-      <!-- 1-1. 타이틀 -->
-      <h1 class="tit">네이버 요약뉴스</h1>
-      <!-- 1-2. 메뉴 -->
-      <nav class="menu">
-        <a href="index.html">
-          <img
-            src="./images/logo.png"
-            alt="네이버로고"
-            style="width: 50px; vertical-align: middle"
-          />
-          <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
-        </a>
-        <a href="sub1.html">정치</a> |
-        <a href="sub2.html">경제</a> |
-        <a href="sub3.html">사회</a> |
-        <a href="sub4.html">IT/과학</a> |
-        <a href="sub5.html">TV/연예</a>
-      </nav>
-    </header>
-    <!-- 2. 메인영역: 컨텐츠 -->
-    <main id="main-area" class="part">
-      <!-- 2-1. 서브 타이틀-->
-      <h2 class="sub-title politics" id="politics">정치 뉴스</h2>
-      <!-- 2-2. 언론사 로고 -->
-      <div class="press-logo">
-      </div>
-      <!-- 2-3. 기사 제목 -->
-      <h3 class="article-title">
-      </h3>
-      <!-- 2-4. 기사 사진 -->
-      <figure class="article-picture">
-        <!-- 이미지 -->
-        <!-- 이미지설명 -->
-        <figcaption>
-          
-        </figcaption>
-      </figure>
-      <!-- 
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 탭에 출력되는 타이틀 -->
+        <title>네이버 요약뉴스 - 정치 뉴스</title>
+        <!-- CSS 인터널방식 코드 -->
+        <style></style>
+        <!-- CSS 익스터널방식 코드 -->
+        <link rel="stylesheet" href="./css/sub.css" />
+    </head>
+    <body>
+        <!-- 1. 상단영역 : 제목, 메뉴 -->
+        <header id="top-area" class="part">
+            <!-- 1-1. 타이틀 -->
+            <h1 class="tit">네이버 요약뉴스</h1>
+            <!-- 1-2. 메뉴 -->
+            <nav class="menu">
+                <a href="index.html">
+                    <img
+                        src="./images/logo.png"
+                        alt="네이버로고"
+                        style="width: 50px; vertical-align: middle"
+                    />
+                    <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
+                </a>
+                <a href="sub1.html">정치</a> | <a href="sub2.html">경제</a> |
+                <a href="sub3.html">사회</a> | <a href="sub4.html">IT/과학</a> |
+                <a href="sub5.html">TV/연예</a>
+            </nav>
+        </header>
+        <!-- 2. 메인영역: 컨텐츠 -->
+        <main id="main-area" class="part">
+            <!-- 2-1. 서브 타이틀-->
+            <h2 class="sub-title politics" id="politics">정치 뉴스</h2>
+            <!-- 2-2. 언론사 로고 -->
+            <div class="press-logo">
+                <img src="./images/press_logo1.png" alt="언론사 로고" />
+            </div>
+            <!-- 2-3. 기사 제목 -->
+            <h3 class="article-title">
+                녹색정의당 경기도당 출범…"노동과 녹색 진보가치로 사회변화"
+            </h3>
+            <!-- 2-4. 기사 사진 -->
+            <figure class="article-picture">
+                <!-- 이미지 -->
+                <img src="./images/article_picture1.jpg" alt="정치기사이미지" />
+                <!-- 이미지설명 -->
+                <figcaption>녹색정의당 경기도당 출범</figcaption>
+            </figure>
+            <!-- 
         [ figure 요소 ]
         - 이미지나 표를 포함하는 박스요소
         - 이미지설명은 하위요소인 figcaption을 사용함
         (설명이 필요없으면 생략한다)
        -->
 
-      <!-- 2-5. 기사내용 -->
-      <section class="contents">
-      </section>
+            <!-- 2-5. 기사내용 -->
+            <section class="contents">
+                <p>
+                    녹색정의당은 4·10 총선을 앞두고 정의당과 녹색당이 결성한
+                    선거연합정당이다.
+                </p>
 
-      <!-- 
+                <p>
+                    녹색당은 지난달 당원 총투표에서 정의당과 선거연합정당을
+                    추진하는 안을 가결했고, 정의당 역시 당명을 '녹색정의당'으로
+                    바꾸는 당원 총투표를 마쳤다.
+                </p>
+
+                <p>
+                    녹색당 후보와 지도부는 녹색당을 탈당하고 녹색정의당에 입당해
+                    총선을 치르게 된다. 총선이 끝난 뒤에는 녹색당으로 다시
+                    당적을 옮길 수 있다.
+                </p>
+
+                <p>
+                    신현자 녹색정의당 경기도당 위원장은 "녹색정의당은 한국
+                    정당사에서 무원칙한 이합집산이 아니라 가치에 기반한 연합,
+                    가치를 나눈 최초의 연대사례"라며 "노동과 녹색의 진보적 가치,
+                    기후위기와 불평등 해소, 지역자치분권과 양당 기득권 타파를
+                    기치로 새로운 정치체계와 사회변화를 위해 나아갈 것"이라고
+                    밝혔다.
+                </p>
+            </section>
+
+            <!-- 
         [ p  요소 : 문단() ]
         - 문단을 구분하기 위한 요소
         - 주의 : 내부에 div와 같은 block 요소를 넣을 수 없다
        -->
 
-       <!-- 2-6. 기자정보 -->
-       <div class="reporter"></div>
+            <!-- 2-6. 기자정보 -->
+            <div class="reporter">
+              최찬흥(chan@yna.co.kr)
+            </div>
 
-       <!-- 2-7. 기사원문 -->
-       <h5 class="article-link">
-        <a href="" target="_blank">기사원문</a>
-       </h5>
+            <!-- 2-7. 기사원문 -->
+            <h5 class="article-link">
+                <a
+                    href="https://n.news.naver.com/mnews/article/001/0014503870"
+                    target="_blank"
+                    >기사원문</a
+                >
+            </h5>
+        </main>
 
-    </main>
+        <!-- 3. 하단영역 : 회사정보 -->
+        <footer id="info-area" class="part">
+            <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
+            <address>
+                서울시 강남구 역삼동 119 대호B 8F <br />
+                대표: Tom Brace Parker <br />
+                전화: 010-7777-8888
+            </address>
+        </footer>
 
-    <!-- 3. 하단영역 : 회사정보 -->
-    <footer id="info-area" class="part">
-      <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
-      <address>
-        서울시 강남구 역삼동 119 대호B 8F <br />
-        대표: Tom Brace Parker <br />
-        전화: 010-7777-8888
-      </address>
-    </footer>
-
-    <!-- 
+        <!-- 
 
         [ 이름규칙 ]
         1. 파스칼 케이스 : JS에서
@@ -176,5 +205,5 @@
         
 
      -->
-  </body>
+    </body>
 </html>

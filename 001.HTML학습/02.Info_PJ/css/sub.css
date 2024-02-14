@@ -13,7 +13,7 @@
 /* 서브페이지 타이틀 */
 h2.sub-title{
     /* 글자색 : color(c)*/
-    color: #0c9f27;
+    /* color: #0c9f27; */
 
     /* 글자크기 : font-size(fz) */
     font-size: 38px;
@@ -69,38 +69,50 @@ h2.sub-title{
     html파일이 아닌 CSS파일 위치에서 상대경로를
     잡아야 이미지가 나옴 */
 }
+
 .politics{
+    color : #0c9f27;
+    /* 개별적으로 이미지 지정 */
     background-image: url(../images/titbg1.jpg);
 }
 .economics{
+    color : #96fba8;
     background-image: url(../images/titbg2.jpg);
 }
 .social{
+    color : #c71757;
     background-image: url(../images/titbg3.jpg);
 }
 .it{
+    color : #2c28cf;
     background-image: url(../images/titbg4.jpg);
 }
 .tv{
+    color : #c13737;
     background-image: url(../images/titbg5.jpg);
 }
 
+.article-picture img{
+    max-width: 100%;
+    width: auto !important;
+    height :auto;
+}
 
 
 
 /* #이 id .이 class 헷갈리지말기 이건 id로 한거
-h2#politics{
+#politics{
     background-image: url(../images/titbg1.jpg);
 }
-h2#economics{
+#economics{
     background-image: url(../images/titbg2.jpg);
 }
-h2#social{
+#social{
     background-image: url(../images/titbg3.jpg);
 }
-h2#it{
+#it{
     background-image: url(../images/titbg4.jpg);
 }
-h2#tv{
+#tv{
     background-image: url(../images/titbg5.jpg);
 } */

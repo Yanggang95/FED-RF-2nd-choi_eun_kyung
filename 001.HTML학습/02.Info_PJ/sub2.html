@@ -1,96 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 탭에 출력되는 타이틀 -->
-    <title>네이버 요약뉴스 - 경제 뉴스</title>
-    <!-- CSS 인터널방식 코드 -->
-    <style></style>
-    <!-- CSS 익스터널방식 코드 -->
-    <link rel="stylesheet" href="./css/sub.css">
-  </head>
-  <body>
-    <!-- 1. 상단영역 : 제목, 메뉴 -->
-    <header id="top-area" class="part">
-      <!-- 1-1. 타이틀 -->
-      <h1 class="tit">네이버 요약뉴스</h1>
-      <!-- 1-2. 메뉴 -->
-      <nav class="menu">
-        <a href="index.html">
-          <img
-            src="./images/logo.png"
-            alt="네이버로고"
-            style="width: 50px; vertical-align: middle"
-          />
-          <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
-        </a>
-        <a href="sub1.html">정치</a> |
-        <a href="sub2.html">경제</a> |
-        <a href="sub3.html">사회</a> |
-        <a href="sub4.html">IT/과학</a> |
-        <a href="sub5.html">TV/연예</a>
-      </nav>
-    </header>
-    <!-- 2. 메인영역: 컨텐츠 -->
-    <main id="main-area" class="part"> 
-      <!-- 2-1. 서브 타이틀-->
-      <h2 class="sub-title economics" id="economics">경제 뉴스</h2>
-      <!-- 2-2. 언론사 로고 -->
-      <div class="press-logo">
-      </div>
-      <!-- 2-3. 기사 제목 -->
-      <h3 class="article-title">
-      </h3>
-      <!-- 2-4. 기사 사진 -->
-      <figure class="article-picture">
-        <!-- 이미지 -->
-        <!-- 이미지설명 -->
-        <figcaption>
-          
-        </figcaption>
-      </figure>
-      <!-- 
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 탭에 출력되는 타이틀 -->
+        <title>네이버 요약뉴스 - 경제 뉴스</title>
+        <!-- CSS 인터널방식 코드 -->
+        <style></style>
+        <!-- CSS 익스터널방식 코드 -->
+        <link rel="stylesheet" href="./css/sub.css" />
+    </head>
+    <body>
+        <!-- 1. 상단영역 : 제목, 메뉴 -->
+        <header id="top-area" class="part">
+            <!-- 1-1. 타이틀 -->
+            <h1 class="tit">네이버 요약뉴스</h1>
+            <!-- 1-2. 메뉴 -->
+            <nav class="menu">
+                <a href="index.html">
+                    <img
+                        src="./images/logo.png"
+                        alt="네이버로고"
+                        style="width: 50px; vertical-align: middle"
+                    />
+                    <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
+                </a>
+                <a href="sub1.html">정치</a> | <a href="sub2.html">경제</a> |
+                <a href="sub3.html">사회</a> | <a href="sub4.html">IT/과학</a> |
+                <a href="sub5.html">TV/연예</a>
+            </nav>
+        </header>
+        <!-- 2. 메인영역: 컨텐츠 -->
+        <main id="main-area" class="part">
+            <!-- 2-1. 서브 타이틀-->
+            <h2 class="sub-title economics" id="economics">경제 뉴스</h2>
+            <!-- 2-2. 언론사 로고 -->
+            <div class="press-logo">
+                <img src="./images/press_logo1.png" alt="언론사 로고" />
+            </div>
+            <!-- 2-3. 기사 제목 -->
+            <h3 class="article-title">
+                금감원장 "금리인하 기대감에 부동산PF 부실 이연하면 안돼"
+            </h3>
+            <!-- 2-4. 기사 사진 -->
+            <figure class="article-picture">
+                <!-- 이미지 -->
+                <img src="./images/article_picture2.jpg" alt="경제기사사진" />
+                <!-- 이미지설명 -->
+                <figcaption>
+                    <p>인사말하는 이복현 금감원장</p>
+                    <p>
+                        (서울=연합뉴스) 류효림 기자 = 이복현 금융감독원장이 5일
+                        오전 서울 여의도 금융감독원에서 열린 2024년도 금융감독원
+                        업무계획 기자간담회에서 인사말을 하고 있다. 2024.2.5
+                        ryousanta@yna.co.kr
+                    </p>
+                </figcaption>
+            </figure>
+            <!-- 
         [ figure 요소 ]
         - 이미지나 표를 포함하는 박스요소
         - 이미지설명은 하위요소인 figcaption을 사용함
         (설명이 필요없으면 생략한다)
        -->
 
-      <!-- 2-5. 기사내용 -->
-      <section class="contents">
-      </section>
+            <!-- 2-5. 기사내용 -->
+            <section class="contents">
+                <p>
+                    (서울=연합뉴스) 채새롬 오지은 기자 = 이복현 금융감독원장은
+                    "금리인하 기대감에 편승해 금융사의 부동산
+                    프로젝트파이낸싱(PF) 부실이 이연되는 일이 없도록 관리해야
+                    한다"고 당부했다.
+                </p>
 
-      <!-- 
+                <p>
+                    이 원장은 14일 임원회의에서 지난밤 발표된 미국의 1월
+                    소비자물가지수(CPI)가 예상치를 상회한 것과 관련해 "금융회사
+                    등 시장 참가자들이 금리인하에 대한 지나친 기대감으로 과도한
+                    레버리지를 활용하지 않도록 유의해야 한다"며 이처럼 말했다.
+                </p>
+
+                <p>
+                    13일(현지시간) 발표된 미국의 1월 CPI는 전년 동월 대비 3.1%
+                    상승해 예상치(2.9% 상승)를 상회하면서 미국
+                    연방준비제도(Fed·연준)가 곧 금리를 인하할 것이라는 기대감을
+                    약화했다.
+                </p>
+
+                <p>
+                    이 원장은 "작년 말부터 시장이 금리인하에 대한 기대감으로
+                    안정된 모습을 보여왔지만, 대내외 잠재 리스크 요인이 여전한
+                    상황에서 변동성이 큰 흐름이 상반기 중 지속될 가능성이
+                    있다"며 "위험 관리에 만전을 기할 필요가 있다"고 강조했다.
+                </p>
+
+                <p>
+                    이어 관계 부서에 국내외 금융시장의 불안 요인에 대해 면밀히
+                    모니터링하는 한편, 특별한 경계감을 갖고 업무에 임해달라고
+                    지시했다.
+                </p>
+
+                <p>
+                    이 원장은 최근 중대 회계 처리기준 위반 사건 처리 중요성이
+                    커지고 있다며 회계 감리와 관련해 원칙을 중심으로 엄정히
+                    대응해야 한다고도 당부했다.
+                </p>
+
+                <p>
+                    이 원장은 "회계기준 및 경제적 실질 면에서 외부 지적에
+                    흔들리지 않고 논리를 단단히 해달라"면서 "원칙을 지키지 않은
+                    기업에 대해서는 엄정히 대처하고, 검찰·국세청 및 공정위원회
+                    등 관계기관과 공조해 유기적으로 대응해야 한다"고 전했다.
+                </p>
+            </section>
+
+            <!-- 
         [ p  요소 : 문단() ]
         - 문단을 구분하기 위한 요소
         - 주의 : 내부에 div와 같은 block 요소를 넣을 수 없다
        -->
 
+            <!-- 2-6. 기자정보 -->
+            <div class="reporter">
+              채새롬(srchae@yna.co.kr)<br/>
+              오지은(built@yna.co.kr)
+            </div>
 
-       <!-- 2-6. 기자정보 -->
-       <div class="reporter"></div>
+            <!-- 2-7. 기사원문 -->
+            <h5 class="article-link">
+                <a
+                    href="https://n.news.naver.com/mnews/article/001/0014504244"
+                    target="_blank"
+                    >기사원문</a
+                >
+            </h5>
+        </main>
 
-       <!-- 2-7. 기사원문 -->
-       <h5 class="article-link">
-        <a href="" target="_blank">기사원문</a>
-       </h5>
+        <!-- 3. 하단영역 : 회사정보 -->
+        <footer id="info-area" class="part">
+            <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
+            <address>
+                서울시 강남구 역삼동 119 대호B 8F <br />
+                대표: Tom Brace Parker <br />
+                전화: 010-7777-8888
+            </address>
+        </footer>
 
-    
-    </main>
-
-    <!-- 3. 하단영역 : 회사정보 -->
-    <footer id="info-area" class="part">
-      <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
-      <address>
-        서울시 강남구 역삼동 119 대호B 8F <br />
-        대표: Tom Brace Parker <br />
-        전화: 010-7777-8888
-      </address>
-    </footer>
-
-    <!-- 
+        <!-- 
 
         [ 이름규칙 ]
         1. 파스칼 케이스 : JS에서
@@ -178,5 +235,5 @@
         
 
      -->
-  </body>
+    </body>
 </html>

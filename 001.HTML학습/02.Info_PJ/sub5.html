@@ -1,94 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 탭에 출력되는 타이틀 -->
-    <title>네이버 요약뉴스 - TV/연예 뉴스</title>
-    <!-- CSS 인터널방식 코드 -->
-    <style></style>
-    <!-- CSS 익스터널방식 코드 -->
-    <link rel="stylesheet" href="./css/sub.css">
-  </head>
-  <body>
-    <!-- 1. 상단영역 : 제목, 메뉴 -->
-    <header id="top-area" class="part">
-      <!-- 1-1. 타이틀 -->
-      <h1 class="tit">네이버 요약뉴스</h1>
-      <!-- 1-2. 메뉴 -->
-      <nav class="menu">
-        <a href="index.html">
-          <img
-            src="./images/logo.png"
-            alt="네이버로고"
-            style="width: 50px; vertical-align: middle"
-          />
-          <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
-        </a>
-        <a href="sub1.html">정치</a> |
-        <a href="sub2.html">경제</a> |
-        <a href="sub3.html">사회</a> |
-        <a href="sub4.html">IT/과학</a> |
-        <a href="sub5.html">TV/연예</a>
-      </nav>
-    </header>
-    <!-- 2. 메인영역: 컨텐츠 -->
-    <main id="main-area" class="part">
-      <!-- 2-1. 서브 타이틀-->
-      <h2 class="sub-title tv" id="tv">TV/연예 뉴스</h2>
-      <!-- 2-2. 언론사 로고 -->
-      <div class="press-logo">
-      </div>
-      <!-- 2-3. 기사 제목 -->
-      <h3 class="article-title">
-      </h3>
-      <!-- 2-4. 기사 사진 -->
-      <figure class="article-picture">
-        <!-- 이미지 -->
-        <!-- 이미지설명 -->
-        <figcaption>
-          
-        </figcaption>
-      </figure>
-      <!-- 
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 탭에 출력되는 타이틀 -->
+        <title>네이버 요약뉴스 - TV/연예 뉴스</title>
+        <!-- CSS 인터널방식 코드 -->
+        <style></style>
+        <!-- CSS 익스터널방식 코드 -->
+        <link rel="stylesheet" href="./css/sub.css" />
+    </head>
+    <body>
+        <!-- 1. 상단영역 : 제목, 메뉴 -->
+        <header id="top-area" class="part">
+            <!-- 1-1. 타이틀 -->
+            <h1 class="tit">네이버 요약뉴스</h1>
+            <!-- 1-2. 메뉴 -->
+            <nav class="menu">
+                <a href="index.html">
+                    <img
+                        src="./images/logo.png"
+                        alt="네이버로고"
+                        style="width: 50px; vertical-align: middle"
+                    />
+                    <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
+                </a>
+                <a href="sub1.html">정치</a> | <a href="sub2.html">경제</a> |
+                <a href="sub3.html">사회</a> | <a href="sub4.html">IT/과학</a> |
+                <a href="sub5.html">TV/연예</a>
+            </nav>
+        </header>
+        <!-- 2. 메인영역: 컨텐츠 -->
+        <main id="main-area" class="part">
+            <!-- 2-1. 서브 타이틀-->
+            <h2 class="sub-title tv" id="tv">TV/연예 뉴스</h2>
+            <!-- 2-2. 언론사 로고 -->
+            <div class="press-logo">
+                <img src="./images/press_logo5.png" alt="언론사로고" />
+            </div>
+            <!-- 2-3. 기사 제목 -->
+            <h3 class="article-title">
+                하이브 5인조 걸그룹 아일릿, 다음 달 데뷔 [연예뉴스 HOT]
+            </h3>
+            <!-- 2-4. 기사 사진 -->
+            <figure class="article-picture">
+                <!-- 이미지 -->
+                <img src="./images/article_picture5.jpg" alt="연예기사사진" />
+                <!-- 이미지설명 -->
+                <figcaption>걸그룹 아일릿. 사진제공｜빌리프랩</figcaption>
+            </figure>
+            <!-- 
         [ figure 요소 ]
         - 이미지나 표를 포함하는 박스요소
         - 이미지설명은 하위요소인 figcaption을 사용함
         (설명이 필요없으면 생략한다)
        -->
 
-      <!-- 2-5. 기사내용 -->
-      <section class="contents">
-      </section>
+            <!-- 2-5. 기사내용 -->
+            <section class="contents">
+                <p>
+                    뉴진스와 르세라핌을 이어 하이브의 새 걸그룹
+                    아일릿(I‘LL-IT)이 다음 달 데뷔한다. 빌리프랩은 13일
+                    “아일릿이 3월 데뷔를 앞두고 있다. 구체적인 데뷔 일정은 추후
+                    공개 예정”이라고 밝혔다. 아일릿은 지난해 9월 JTBC
+                    오디션프로그램 ‘알 유 넥스트?’(R U Next?)를 통해 결성된
+                    5인조 걸그룹으로 윤아, 민주, 모카, 원희, 이로하 등으로
+                    구성됐다. 하이브는 레이블을 통해 르세라핌(쏘스뮤직)과
+                    뉴진스(어도어)를 선보였다. 팀명은 자주적인 ‘의지’(I will)와
+                    특별한 무언가를 의미하는 ‘대명사’(It)를 결합해 만들었다.
+                </p>
+            </section>
 
-      <!-- 
+            <!-- 
         [ p  요소 : 문단() ]
         - 문단을 구분하기 위한 요소
         - 주의 : 내부에 div와 같은 block 요소를 넣을 수 없다
        -->
 
+            <!-- 2-6. 기자정보 -->
+            <div class="reporter">
+              이승미 기자 smlee@donga.com
+            </div>
 
-       <!-- 2-6. 기자정보 -->
-       <div class="reporter"></div>
+            <!-- 2-7. 기사원문 -->
+            <h5 class="article-link">
+                <a
+                    href="https://sports.donga.com/article/all/20240213/123503333/1"
+                    target="_blank"
+                    >기사원문</a
+                >
+            </h5>
+        </main>
 
-       <!-- 2-7. 기사원문 -->
-       <h5 class="article-link">
-        <a href="" target="_blank">기사원문</a>
-       </h5>
-    </main>
+        <!-- 3. 하단영역 : 회사정보 -->
+        <footer id="info-area" class="part">
+            <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
+            <address>
+                서울시 강남구 역삼동 119 대호B 8F <br />
+                대표: Tom Brace Parker <br />
+                전화: 010-7777-8888
+            </address>
+        </footer>
 
-    <!-- 3. 하단영역 : 회사정보 -->
-    <footer id="info-area" class="part">
-      <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
-      <address>
-        서울시 강남구 역삼동 119 대호B 8F <br />
-        대표: Tom Brace Parker <br />
-        전화: 010-7777-8888
-      </address>
-    </footer>
-
-    <!-- 
+        <!-- 
 
         [ 이름규칙 ]
         1. 파스칼 케이스 : JS에서
@@ -176,5 +191,5 @@
         
 
      -->
-  </body>
+    </body>
 </html>

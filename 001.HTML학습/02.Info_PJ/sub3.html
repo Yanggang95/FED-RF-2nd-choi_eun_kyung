@@ -1,96 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 탭에 출력되는 타이틀 -->
-    <title>네이버 요약뉴스 - 사회 뉴스</title>
-    <!-- CSS 인터널방식 코드 -->
-    <style></style>
-    <!-- CSS 익스터널방식 코드 -->
-    <link rel="stylesheet" href="./css/sub.css">
-  </head>
-  <body>
-    <!-- 1. 상단영역 : 제목, 메뉴 -->
-    <header id="top-area" class="part">
-      <!-- 1-1. 타이틀 -->
-      <h1 class="tit">네이버 요약뉴스</h1>
-      <!-- 1-2. 메뉴 -->
-      <nav class="menu">
-        <a href="index.html">
-          <img
-            src="./images/logo.png"
-            alt="네이버로고"
-            style="width: 50px; vertical-align: middle"
-          />
-          <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
-        </a>
-        <a href="sub1.html">정치</a> |
-        <a href="sub2.html">경제</a> |
-        <a href="sub3.html">사회</a> |
-        <a href="sub4.html">IT/과학</a> |
-        <a href="sub5.html">TV/연예</a>
-      </nav>
-    </header>
-    <!-- 2. 메인영역: 컨텐츠 -->
-    <main id="main-area" class="part">
-      <!-- 2-1. 서브 타이틀-->
-      <h2 class="sub-title social" id="social">사회 뉴스</h2>
-      <!-- 2-2. 언론사 로고 -->
-      <div class="press-logo">
-      </div>
-      <!-- 2-3. 기사 제목 -->
-      <h3 class="article-title">
-      </h3>
-      <!-- 2-4. 기사 사진 -->
-      <figure class="article-picture">
-        <!-- 이미지 -->
-        <!-- 이미지설명 -->
-        <figcaption>
-          
-        </figcaption>
-      </figure>
-      <!-- 
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 뷰포트: 모바일 기기에서 실제 픽셀을 맞춰주는 메타설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 탭에 출력되는 타이틀 -->
+        <title>네이버 요약뉴스 - 사회 뉴스</title>
+        <!-- CSS 인터널방식 코드 -->
+        <style></style>
+        <!-- CSS 익스터널방식 코드 -->
+        <link rel="stylesheet" href="./css/sub.css" />
+    </head>
+    <body>
+        <!-- 1. 상단영역 : 제목, 메뉴 -->
+        <header id="top-area" class="part">
+            <!-- 1-1. 타이틀 -->
+            <h1 class="tit">네이버 요약뉴스</h1>
+            <!-- 1-2. 메뉴 -->
+            <nav class="menu">
+                <a href="index.html">
+                    <img
+                        src="./images/logo.png"
+                        alt="네이버로고"
+                        style="width: 50px; vertical-align: middle"
+                    />
+                    <!-- style속성으로 개별요소에 CSS를 설정할 수 있다! 이런방식을 인라인방식이라고 함 -->
+                </a>
+                <a href="sub1.html">정치</a> | <a href="sub2.html">경제</a> |
+                <a href="sub3.html">사회</a> | <a href="sub4.html">IT/과학</a> |
+                <a href="sub5.html">TV/연예</a>
+            </nav>
+        </header>
+        <!-- 2. 메인영역: 컨텐츠 -->
+        <main id="main-area" class="part">
+            <!-- 2-1. 서브 타이틀-->
+            <h2 class="sub-title social" id="social">사회 뉴스</h2>
+            <!-- 2-2. 언론사 로고 -->
+            <div class="press-logo">
+                <img src="./images/press_logo3.png" alt="언론사로고" />
+            </div>
+            <!-- 2-3. 기사 제목 -->
+            <h3 class="article-title">
+                간호사들 "의사들 현장 떠나선 안 돼"...'의대 증원' 지지
+            </h3>
+            <!-- 2-4. 기사 사진 -->
+            <figure class="article-picture">
+                <!-- 이미지 -->
+                <img src="./images/article_picture3.jpg" alt="사회기사사진" />
+                <!-- 이미지설명 -->
+                <figcaption>
+                    13일 오후 부산 동구 부산시의사회관에서 검은 옷을 차려입은
+                    의사들이 의과대학 정원 확대 등 긴급 의료현안에 대한 토론회
+                    및 결의대회를 열고 있다. /사진=연합뉴스
+                </figcaption>
+            </figure>
+            <!-- 
         [ figure 요소 ]
         - 이미지나 표를 포함하는 박스요소
         - 이미지설명은 하위요소인 figcaption을 사용함
         (설명이 필요없으면 생략한다)
        -->
 
-      <!-- 2-5. 기사내용 -->
-      <section class="contents">
-      </section>
+            <!-- 2-5. 기사내용 -->
+            <section class="contents">
+                <p>
+                    전국의 간호사들이 의과대학 입학정원 확대 등 정부의
+                    의료개혁을 적극 지지한다고 선언했습니다.
+                </p>
 
-      <!-- 
+                <p>
+                    대한간호협회(간협)는 오늘(14일) 오전 서울 여의도 국회 앞에서
+                    '의료개혁 적극 지지 및 의료정상화 5대 요구사항 추진 촉구
+                    긴급 기자회견'을 열어 이같이 밝혔습니다.
+                </p>
+
+                <p>
+                    간협은 "국민들은 의사 부족으로 적절한 치료를 받지 못해
+                    생명까지 위협받는 상황에 이르렀고, 대한민국의 가장 큰 병원의
+                    간호사가 쓰러져도 의사가 없어 수술조차 받지 못하는 사고까지
+                    일어났다"며 "더 이상 이런 비극이 일어나선 안 된다"고
+                    역설했습니다.
+                </p>
+
+                <p>
+                    이는 지난 2022년 서울아산병원 간호사가 근무 중 뇌출혈로
+                    쓰러져 응급실로 옮겨졌으나, 당시 수술이 가능한 신경외과
+                    의사가 없어 서울대병원으로 이송했다가 결국 숨진 사례를
+                    말합니다.
+                </p>
+
+                <p>
+                    이어 "국민들의 생명이 위협받는 현실에서 의료인이라면 당연히
+                    국민들 편에 서야 하지만 82%의 의사들은 의료개혁을 강하게
+                    반대하고 있고 의사단체는 개혁 반대를 위한 집단행동을
+                    준비하고 있다"며 "하지만 대한간호협회는 의료개혁을 반대하는
+                    82%가 아닌 국민의 편에 서서 의사의 본분을 지키는 18% 용감한
+                    의사들을 지지한다. 이들이야말로 진정 국민을 살리는
+                    의사들"이라고 말했습니다.
+                </p>
+
+                <p>
+                    그러면서 "의사단체는 의료인의 본분을 지켜야 한다"며 "자신의
+                    이익을 위해 화염에 휩싸인 화재 현장을 떠나는 소방관을 상상할
+                    수 있겠는지, 범죄가 일어나고 있는 현장을 떠나는 경찰관을
+                    상상할 수 있겠는지 되묻고 싶다"고 주장했습니다.
+                </p>
+
+                <p>
+                    이들은 "국민들의 생명을 지키는 의료인은 어떤 순간에도
+                    국민들을 지키는 현장을 떠나서는 안 된다"며 "의사들이
+                    두려워할 것은 정부가 아니라 국민들"이라고 했습니다.
+                </p>
+
+                <p>
+                    또 "정부의 의료개혁을 지지하지만 이것은 진정한 의료개혁의
+                    시작일 뿐"이라며 "정부는 초고령사회와 지방 소멸이 동시에
+                    진행되어 지역 의료가 붕괴되는 현실에서 국민을 지키기 위한
+                    개혁에 적극 나서야 한다"고 강조했습니다.
+                </p>
+
+                <p>
+                    마지막으로 "행여나 이들 이익단체들과 의료개혁을 퇴보시키는
+                    밀실 타협을 하는 등의 시도는 절대 하지 말아야 한다"며
+                    "국민들의 생명과 건강권은 절대 타협의 대상이 아니다"라고
+                    강조했습니다.
+                </p>
+
+                <p>
+                    이들은 '대리수술 등 불법 의료행위 근절할 근본 대책 마련',
+                    '간호간병 국가 책임제 실시', '지방 의료 불균형 문제 해결',
+                    '노인질환과 만성질환 문제 해결하기 위한 재택 간호시스템을
+                    대폭 확대', '국민 건강 보장을 위한 필수조건인 간호서비스
+                    보장을 위한 법 제정' 등 국민의 건강권 확대를 위한 5대
+                    핵심과제를 촉구했습니다.
+                </p>
+            </section>
+
+            <!-- 
         [ p  요소 : 문단() ]
         - 문단을 구분하기 위한 요소
         - 주의 : 내부에 div와 같은 block 요소를 넣을 수 없다
        -->
 
+            <!-- 2-6. 기자정보 -->
+            <div class="reporter">
+              장나영 디지털뉴스부 인턴기자 jangnayoungny@gmail.com
+            </div>
 
-       <!-- 2-6. 기자정보 -->
-       <div class="reporter"></div>
+            <!-- 2-7. 기사원문 -->
+            <h5 class="article-link">
+                <a
+                    href="https://n.news.naver.com/mnews/article/057/0001799168"
+                    target="_blank"
+                    >기사원문</a
+                >
+            </h5>
+        </main>
 
-       <!-- 2-7. 기사원문 -->
-       <h5 class="article-link">
-        <a href="" target="_blank">기사원문</a>
-       </h5>
+        <!-- 3. 하단영역 : 회사정보 -->
+        <footer id="info-area" class="part">
+            <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
+            <address>
+                서울시 강남구 역삼동 119 대호B 8F <br />
+                대표: Tom Brace Parker <br />
+                전화: 010-7777-8888
+            </address>
+        </footer>
 
-    
-    </main>
-
-    <!-- 3. 하단영역 : 회사정보 -->
-    <footer id="info-area" class="part">
-      <!-- address : 주소, 전화번호, 대표자 등을 포함하는 시멘틱 태그 -->
-      <address>
-        서울시 강남구 역삼동 119 대호B 8F <br />
-        대표: Tom Brace Parker <br />
-        전화: 010-7777-8888
-      </address>
-    </footer>
-
-    <!-- 
+        <!-- 
 
         [ 이름규칙 ]
         1. 파스칼 케이스 : JS에서
@@ -178,5 +255,5 @@
         
 
      -->
-  </body>
+    </body>
 </html>
