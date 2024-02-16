@@ -394,6 +394,7 @@ h2.sub-title{
 
 /* 작품 이미지 */
 .work img{
+    /* 액자 틀 모양 */
     border: 12px ridge goldenrod;
 }
 
