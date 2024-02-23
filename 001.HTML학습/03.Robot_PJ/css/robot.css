@@ -165,7 +165,45 @@ body * {
     /* 부모는? .body */
     top: 0;
     width: 50px;
-    height: 200px;
+    height: 180px;
+}
+
+/* 팔 관절 가상요소 공통 */
+.arm::before{
+    content: '';
+    position: absolute;
+    /* 부모는? .arm */
+    top: calc(100% - 50px/2);
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index:1;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #ccc;
+    /* 보더 때문에 박스가 커지므로
+    패딩, 보더 포함박스 설정하기 */
+    box-sizing : border-box;
+}
+
+/* 작은원 */
+.arm::after{
+    content: '';
+    position: absolute;
+    /* 부모는? .arm */
+    top: calc(100% - 40px/2);
+    /* 부모박스 바깥으로 모두 밀고 원크기 절반 빼기 */
+    left: calc(50% - 40px/2);
+    /* 부모박스 바깥으로 절반만큼 밀고 원크기 절반 빼기(가로중앙) */
+    width: 40px;
+    height: 40px;
+    z-index:1;
+    border-radius: 50%;
+    background-color: #000;
+    /* 그라데이션 배경 */
+    background-image: linear-gradient(to bottom,#ccc,#222);
+    /* 박스 내부그림자 : bsh -> inset 키워드 */
+    box-shadow: inset 0 0 5px #222;
 }
 
 /* 팔하단 공통 */
@@ -188,7 +226,6 @@ body * {
     height: 110px;
     outline: 2px dotted lime;
     /* 배경공통 */
-    background-image: url(../images/hand_left.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -197,13 +234,15 @@ body * {
 .arm1 span::after{
     /* 배경이미지경로 */
     background-image: url(../images/hand_left.png);
-    
+    /*  */
+    left: -12px;
 }
 /* 오른손 */
 .arm2 span::after{
     /* 배경이미지경로 */
     background-image: url(../images/hand_right.png);
-    
+    /*  */
+    left: -25px;
 }
 
 /* 왼팔 */
