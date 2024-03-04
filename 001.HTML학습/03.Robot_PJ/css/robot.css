@@ -23,8 +23,14 @@ ol {
     margin: 0;
     padding: 0;
 }
+/* html 루트 설정 */
+html{
+    font-size: 10px;
+    /* rem단위 글자계산 편위위해 */
+  }
 /* 전체 배경이미지 */
 body {
+    padding-top: 100vh;
     background: url(../images/bg.jpg) no-repeat fixed top/cover;
 }
 
@@ -43,22 +49,21 @@ body * {
 }
 
 /************** 1.상단영역 **************/
-h1.logo{
+h1.logo {
     position: fixed;
-    top:calc(50% - 10vw);
-    left:calc(50% - 10vw);
+    top: calc(50% - 10vw);
+    left: calc(50% - 10vw);
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
     z-index: 999;
     background: pink url(../images/robot_03.png) no-repeat center/auto 100%;
-    box-shadow: inset 0 0 20px 5px #000, 
-    0 0 20px 5px qua transparent;
+    box-shadow: inset 0 0 20px 5px #000, 0 0 20px 5px qua transparent;
 
     /* 글자설정 */
     text-align: center;
     line-height: 20vw;
-    font-family: 'Orbitron';
+    font-family: "Orbitron";
     font-size: 5vw;
     color: lightgreen;
     text-shadow: 0 0 10px #000;
@@ -67,7 +72,11 @@ h1.logo{
 /************** 2.메인영역 **************/
 /* 2-1. 로봇박스 */
 .robot-box {
-    padding-top: 200px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(124%, -10%) scale(0.3);
+    /* padding-top: 200px; */
     margin-bottom: 560px;
 }
 /* 2-1-1. 로봇머리 */
@@ -86,8 +95,8 @@ h1.logo{
 }
 
 /* 로봇머리 가상요소로 가발만들기 */
-.head::after{
-    content:'';
+.head::after {
+    content: "";
     position: absolute;
     /* 부모는? .head */
     top: -76px;
@@ -95,7 +104,7 @@ h1.logo{
     width: 489px;
     height: 600px;
     background: url(../images/hair.png) no-repeat 0/100% 100%;
-    filter : hue-rotate(0deg);
+    filter: hue-rotate(0deg);
 }
 
 /* 눈공통 */
@@ -478,7 +487,7 @@ h1.logo{
 }
 
 /* 2-2.로봇설명박스 */
-.text-box{
+.text-box {
     max-width: 800px;
     margin: 0 auto;
     color: #fff;
@@ -486,9 +495,7 @@ h1.logo{
     background-color: #0000006f;
     border-radius: 20px;
     /* 박스 내부그림자 */
-    box-shadow: 
-    inset 0 0 20px blue,
-    inset 0 0 50px 10px cyan;
+    box-shadow: inset 0 0 20px blue, inset 0 0 50px 10px cyan;
     /* 
     [백드롭 필터효과] 
     - filter속성과 동일한 셋팅을 가지며
@@ -509,15 +516,15 @@ h1.logo{
     backdrop-filter: blur(4px) saturate(150%);
     */
     backdrop-filter: blur(6px);
-  }
-  
-  /* 2-2-1.제목 */
-  .text-box h2{
+}
+
+/* 2-2-1.제목 */
+.text-box h2 {
     position: sticky;
     top: 10px;
     /* 글자크기 35px -> em단위 */
     font-size: 3.5rem;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: "Chakra Petch", sans-serif;
     text-align: center;
     background-color: #ffffff86;
     color: lime;
@@ -525,23 +532,23 @@ h1.logo{
     border-radius: 20px;
     /* 얇은글자 */
     font-weight: normal;
-  }
-  
-  /* 2-2-2.출처 */
-  .text-box small{
+}
+
+/* 2-2-2.출처 */
+.text-box small {
     /* 인라인은 디자인상 블록으로 전환! */
     display: block;
     text-align: center;
     /* 글자크기 12px */
     font-size: 1.2rem;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: "Chakra Petch", sans-serif;
     color: yellow;
     text-shadow: 1px 1px 1px #0000006f;
     padding: 10px;
-  }
-  /* 2-2-3.내용단락 */
-  .text-box p {  
-    font-family: 'Barlow';
+}
+/* 2-2-3.내용단락 */
+.text-box p {
+    font-family: "Barlow";
     font-size: 1.7rem;
     /* 줄간격 */
     line-height: 1.7;
@@ -549,7 +556,7 @@ h1.logo{
     letter-spacing: 1px;
     /* 단어간격 */
     word-spacing: 2px;
-  
+
     /* 
       [ 다단설정하기 ]
       - 다중열속성
@@ -564,22 +571,21 @@ h1.logo{
     /* column-rule: 두께 종류 색; */
     /* 사이간격 */
     column-gap: 55px;
-  
+
     /* 양쪽정렬 */
     text-align: justify;
     /* 영문자는 단어를 깨줘야함! */
     word-break: break-all;
-  
+
     /* 첫줄 들여쓰기 :  text-indent (ti) */
     text-indent: 40px;
-  }
-  
-  /* 가상요소 첫글자 변경하기 */
-  .text-box p::first-letter {  
+}
+
+/* 가상요소 첫글자 변경하기 */
+.text-box p::first-letter {
     font-size: 2.8rem;
     color: hotpink;
     font-weight: bold;
-  }
-  
+}
 
 /************** 3.하단영역 **************/
