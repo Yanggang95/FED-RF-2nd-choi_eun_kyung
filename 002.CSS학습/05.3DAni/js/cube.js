@@ -26,12 +26,17 @@ const cube = document.querySelector('.cube');
 // 이벤트 발생시 익명함수 내부의 코드가 실행됨
 btngo.onclick = function (){
     // 1. 함수호출확인(this는 버튼자신)
-    console.log('나야나', this)
+    /* console.log('나야나', this) */
 
     // 2. 변경대상 : .cube -> cube변수
     // 3. 변경내용 : 큐브에 클래스 on을 없으면 넣고 있으면 제거한다
     // -> 미리 셋팅된 애니작동/멈춤됨
     cube.classList.toggle('on');
+
+    // 큐브 거리변경 변수셋팅은
+    // html 요소에 클래스on을 넣기/빼기하면
+    // 적용된다
+    document.querySelector('html').classList.toggle('on');
     // classList는 요소의 클래스만 전문적으로 
     // 다뤄주는 JS 내장객체다
     // 메서드로 add()-넣기, remove()-지우기, toggle()-넣기/지우기
