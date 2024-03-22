@@ -172,6 +172,7 @@
                         }
                     };
                 }
+                
 
                 /******************************************* 
                 추가기능 : .wrap 박스에 마우스 무브시
@@ -196,16 +197,18 @@
                     // 위치값 기준은 document 문서전체이며
                     // x축은 왼쪽끝, y축은 상단끝이 기준임
                     // 숫자는 단위표시없는 px값
-                     console.log("x:", e.pageX, "\ny:", e.pageY);
+                     //console.log("x:", e.pageX, "\ny:", e.pageY);
 
                     //변경 대상의 top,left 값을 변경한다
                     moving.style.top = e.pageY + "px";
                     moving.style.left = e.pageX + "px";
                 }; // mousemove이벤트함수
-
+               
                 // .wrap에 마우스 엔터시 포스터 보이기
                 wrap.onmouseenter = () => {
+                    
                     // 포스터 박스 배경이미지 초기셋팅하기
+                    
                     // 첫번째 입력박스값 빈값 ? "기본" : 포스터명
                     // minfo[0]이 첫번째 입력박스임
                     moving.style.backgroundImage = 
@@ -216,7 +219,7 @@
                 wrap.onmouseleave = () => {
                     moving.style.display = 'none';
                 }
-
+            
             } //////////loadFn 함수
 
             // 1. 이벤트 대상 : 버튼들 .btngo
