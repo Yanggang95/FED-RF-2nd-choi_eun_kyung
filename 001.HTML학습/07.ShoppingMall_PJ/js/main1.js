@@ -66,9 +66,11 @@ function loadFn() {
     // 5개의 슬라이드와 블릿을 만들어준다
     for (let i = 0; i < 5; i++) {
         // 슬라이드 넣기
-        slide.innerHTML += `<li data-seq="${i}"><img src="images/slide0${i+1}.jpg" alt="slide"></li>`;
+        slide.innerHTML += `<li data-seq="${i}"><img src="images/slide0${
+            i + 1
+        }.jpg" alt="slide"></li>`;
         // 블릿 넣기
-        indic.innerHTML += `<li ${i===0? 'class="on"':''} >
+        indic.innerHTML += `<li ${i === 0 ? 'class="on"' : ""} >
         <img src="images/dot1.png" alt="흰색">
         <img src="images/dot2.png" alt="회색">
         </li>`;
@@ -76,10 +78,10 @@ function loadFn() {
 
     // li를 생성한 후 그 li다시 수집한다
     // 블릿의 li까지 수집 indic 변수
-    indic = qsa('.indic li');
+    indic = qsa(".indic li");
 
     // 슬라이드 순번 전역변수
-    let snum = 0;
+    // let snum = 0; -> 불필요
 
     // 2. 버튼을 모두 이벤트 설정하기
     for (let x of abtn) {
@@ -100,7 +102,25 @@ function loadFn() {
         함수명 : goSlide
         기능 : 슬라이드 이동
      **********************************************/
-    function goSlide() {
+    function goSlide(evt, sts = true) {
+        // evt-이벤트객체전달 : PointerEvent{}
+        // sts-버튼클릭인지 자동호출인지 구분하는 변수
+        // -> true면 버튼클릭, false면 자동호출로 구분
+        // -> 버튼클릭시엔 아무것도 안보내므로 기본값
+        // true가 할당되어 적용됨!
+        // -> 만약 전달값이 없으면 기본값으로 셋팅함!
+        // -> ES6문법에서 전달변수 초기값 주기 문법생김!
+
+        // 함수를 호출시에 아무값도 보내지 않으면
+        // 함수의 전달변수 하나를 쓸 경우 또는
+        // 여러전달변수중 첫번째 변수는 이벤트객체가
+        // 전달된다!
+        console.log("전달변수:", evt, sts);
+
+        // 만약 버튼 클릭일 경우 인터발지우기함수호출!
+        if (sts) {
+            clearAuto();
+        } ///// if ////
         // 광클금지 설정하기
         // 클릭신호를 막아서 못들어오게 하고
         // 일정시간후 다시 열어준다
@@ -111,7 +131,12 @@ function loadFn() {
         }, 600);
 
         // 1. 오른쪽 버튼인 .ab2인가?
-        let isRbtn = this.classList.contains("ab2");
+        let isRbtn = sts ? this.classList.contains("ab2") : true;
+        // sts값이 true냐? 맞으면 버튼을 클릭한 것이므로
+        // this키워드에 의한 클래스 .ab2 존재여부를 물어라!
+        // false냐? 맞으면 무조건 true값을 할당해라!
+        // 왜? 자동넘김은 오른쪽버튼 클릭한 방향으로 가야하니까!
+
         // [ classList 객체의 contains() 메서드 ]
         // -> 해당요소의 특정 클래스인지 여부를 리턴함
         // 해당클래스가 있으면 true, 없으면 false
@@ -173,28 +198,72 @@ function loadFn() {
                 slide.style.transition = ".6s ease-out";
             }, 0);
         }
-        
+
         // 3. 블릿을 위해 읽어올 슬라이드 순번 구하기
         // 현재순번은 몇번째 슬라이드의 data-seq속성값이다
         // 오른쪽 버튼은 이동후 잘라내므로 두번째 순번[1]
         // 왼쪽 버튼은 먼저 앞에 붙이고 이동하므로 첫번째순번[0]
-        let seq = slide.querySelectorAll('li')[isRbtn?1:0].getAttribute('data-seq');
-        console.log('블릿이 읽어올 슬라이드순번:',seq, '데이터형:',typeof seq);
+        let seq = slide
+            .querySelectorAll("li")
+            [isRbtn ? 1 : 0].getAttribute("data-seq");
+        console.log(
+            "블릿이 읽어올 슬라이드순번:",
+            seq,
+            "데이터형:",
+            typeof seq
+        );
         // 4. 블릿변경하기
-         // 모든 클래스 on지우기 + 현재 순번 클래스 넣기
-         indic.forEach((ele,idx)=>{
+        // 모든 클래스 on지우기 + 현재 순번 클래스 넣기
+        indic.forEach((ele, idx) => {
             // ele - 각각의 li, idx - 각각의 순번
-            if(idx==seq){ // 현재순번 on넣기
+            if (idx == seq) {
+                // 현재순번 on넣기
                 // ==으로 비교해야 결과가 나옴
                 // data-seq 속성은 문자형숫자이므로
                 // ===은 형까지 비교하기때문에 안나옴
-                ele.classList.add('on');
-            }else{ // 나머지는 on빼기
-                ele.classList.remove('on');
+                ele.classList.add("on");
+            } else {
+                // 나머지는 on빼기
+                ele.classList.remove("on");
             }
-    
-            });
-    
+        });
     } // goSlide 함수
+
+    // 인터발용 변수(지울목적)
+    let autoI;
+    // 타임아웃용 변수(지울목적)
+    let autoT;
+    // 자동넘김호출함수 최초호출하기
+    autoSlide();
+
+    // [ 자동넘김호출함수 ] /////
+    function autoSlide() {
+        // setInterval(함수,시간)
+        // - 일정시간간격으로 함수를 호출
+        // clearInterval(인터발변수)
+        // - 변수에 담긴 인터발을 지움(멈춤)
+        autoI = setInterval(() => {
+            // 값을 2개 보내야함
+            // 첫번째 전달값은 이벤트객체가 들어가는 변수이므로
+            // false값을 쓰고
+            // 두번째 전달값은 자동호출임을 알리는 변수이므로
+            // false값을 전달한다!
+            goSlide(false, false);
+        }, 3000);
+    } /////// autoSlide 함수 /////////////
+
+    /// [ 인터발 지우기함수 ] ///////
+    function clearAuto() {
+        // 지우기 확인!
+        console.log("인터발 지워!");
+        // 1.인터발 지우기
+        clearInterval(autoI);
+        // 2.타임아웃 지우기 : 실행쓰나미 방지!!!
+        clearTimeout(autoT);
+        // 3.5초후 아무작동도 안하면 다시 인터발호출
+        autoT = setTimeout(() => {
+            autoSlide();
+        }, 5000);
+    } ////////// clearAuto ////////////
 } //////////////// loadFn 함수 ///////////////
 /////////////////////////////////////////////
